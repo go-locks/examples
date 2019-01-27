@@ -21,7 +21,7 @@ func main() {
 
 	/* now you can instantiate redis driver for distributed locks use redigo instance.
 	 * you can specify multiple redigo instances to protect from single node of failure. */
-	rd := redis.New(rg, /* more redigo instances here if you need. */)
+	rd := redis.New(rg /* more redigo instances here if you need. */)
 
 	/* instantiate a distlock instance by your redis driver. */
 	dl := distlock.New(rd)
